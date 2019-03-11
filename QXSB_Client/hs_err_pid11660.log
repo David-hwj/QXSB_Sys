@@ -1,0 +1,371 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fffbfed4989, pid=11660, tid=0x000000000000554c
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_191-b12) (build 1.8.0_191-b12)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.191-b12 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [ntdll.dll+0x24989]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000001aa91800):  JavaThread "SwingWorker-pool-2-thread-1" daemon [_thread_in_native, id=21836, stack(0x000000001e3d0000,0x000000001e4d0000)]
+
+siginfo: ExceptionCode=0xc0000005, writing address 0x0000000000000024
+
+Registers:
+RAX=0xffffffffffffffff, RBX=0x000000001d0c7d50, RCX=0x0000000000000000, RDX=0xffffffffffffffff
+RSP=0x000000001e4ce380, RBP=0x000000001e4ce3f0, RSI=0x0000000000000000, RDI=0x0000000000000000
+R8 =0x0000000000000000, R9 =0x00007fffa5890500, R10=0x0000000000000080, R11=0x000000001e4ce4e0
+R12=0x0000000000000000, R13=0x00000000178ab228, R14=0x0000000000000000, R15=0x000000001aa91800
+RIP=0x00007fffbfed4989, EFLAGS=0x0000000000010213
+
+Top of Stack: (sp=0x000000001e4ce380)
+0x000000001e4ce380:   ffffffffffffffff 000000001d0c7d50
+0x000000001e4ce390:   0000000002c225f0 00000000bfeb83d0
+0x000000001e4ce3a0:   000000001d658050 0000000000000000
+0x000000001e4ce3b0:   000000001e4ce498 00000000007b5000
+0x000000001e4ce3c0:   000000001aa91800 000000001e4cec80
+0x000000001e4ce3d0:   0000add697eb1f5e 00007fff00000000
+0x000000001e4ce3e0:   0000000000000000 00007fff7f9ee96b
+0x000000001e4ce3f0:   000000001aa91800 0000000000000001
+0x000000001e4ce400:   00000000178ab228 0000000000000000
+0x000000001e4ce410:   0000000000000000 000000001d0c7c00
+0x000000001e4ce420:   0000000000000001 00007fffbfecefb7
+0x000000001e4ce430:   000000001e4ce400 000000001d0c7d50
+0x000000001e4ce440:   00000000fffffffa 000000001aa91800
+0x000000001e4ce450:   000000001e4cec80 00007fffbfeceed0
+0x000000001e4ce460:   000000001d0c7d48 000000001e4ce510
+0x000000001e4ce470:   000000001d0c7cd0 00007fffa3de8080 
+
+Instructions: (pc=0x00007fffbfed4989)
+0x00007fffbfed4969:   35 52 75 13 00 4c 0f 45 f6 48 39 73 18 0f 84 b6
+0x00007fffbfed4979:   01 00 00 48 8b 0b 48 83 f9 ff 0f 84 b6 01 00 00
+0x00007fffbfed4989:   ff 41 24 48 8b 7b 18 44 8b ee 48 89 7d c0 e8 74
+0x00007fffbfed4999:   2a ff ff 85 c0 0f 85 4e 73 08 00 b9 82 03 fe 7f 
+
+
+Register to memory mapping:
+
+RAX=0xffffffffffffffff is an unknown value
+RBX=0x000000001d0c7d50 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0xffffffffffffffff is an unknown value
+RSP=0x000000001e4ce380 is pointing into the stack for thread: 0x000000001aa91800
+RBP=0x000000001e4ce3f0 is pointing into the stack for thread: 0x000000001aa91800
+RSI=0x0000000000000000 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x00007fffa5890500 is an unknown value
+R10=0x0000000000000080 is an unknown value
+R11=0x000000001e4ce4e0 is pointing into the stack for thread: 0x000000001aa91800
+R12=0x0000000000000000 is an unknown value
+R13={method} {0x00000000178ab230} 'invokeLong' '(JI[Ljava/lang/Object;)J' in 'com/sun/jna/Native'
+R14=0x0000000000000000 is an unknown value
+R15=0x000000001aa91800 is a thread
+
+
+Stack: [0x000000001e3d0000,0x000000001e4d0000],  sp=0x000000001e4ce380,  free space=1016k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [ntdll.dll+0x24989]
+C  [ntdll.dll+0x1efb7]
+C  [ntdll.dll+0x1eed0]
+C  [libvlc.dll+0x10437]
+C  [jna678776297431598257.dll+0x176f3]
+C  [jna678776297431598257.dll+0xffe7]
+C  [jna678776297431598257.dll+0x3d1a]
+C  [jna678776297431598257.dll+0x4e97]
+C  0x0000000002ce8c67
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.sun.jna.Native.invokeLong(JI[Ljava/lang/Object;)J+0
+J 1465 C1 com.sun.jna.Function.invoke([Ljava/lang/Object;Ljava/lang/Class;Z)Ljava/lang/Object; (1149 bytes) @ 0x00000000031be64c [0x00000000031b76a0+0x6fac]
+j  com.sun.jna.Function.invoke(Ljava/lang/Class;[Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/Object;+214
+J 1464 C1 com.sun.jna.Library$Handler.invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object; (345 bytes) @ 0x00000000031b425c [0x00000000031b1fc0+0x229c]
+j  com.sun.proxy.$Proxy0.libvlc_media_player_get_length(Luk/co/caprica/vlcj/binding/internal/libvlc_media_player_t;)J+16
+j  uk.co.caprica.vlcj.player.DefaultMediaPlayer.getLength()J+19
+j  com.control.Control$1$1.doInBackground()Ljava/lang/String;+6
+j  com.control.Control$1$1.doInBackground()Ljava/lang/Object;+1
+j  javax.swing.SwingWorker$1.call()Ljava/lang/Object;+14
+j  java.util.concurrent.FutureTask.run()V+42
+j  javax.swing.SwingWorker.run()V+4
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+95
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000001aa8c800 JavaThread "DestroyJavaVM" [_thread_blocked, id=2980, stack(0x0000000002ad0000,0x0000000002bd0000)]
+  0x000000001aa8e800 JavaThread "TimerQueue" daemon [_thread_blocked, id=17976, stack(0x000000001e4d0000,0x000000001e5d0000)]
+=>0x000000001aa91800 JavaThread "SwingWorker-pool-2-thread-1" daemon [_thread_in_native, id=21836, stack(0x000000001e3d0000,0x000000001e4d0000)]
+  0x000000001aa91000 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=7188, stack(0x000000001e1d0000,0x000000001e2d0000)]
+  0x000000001a967000 JavaThread "AWT-Shutdown" [_thread_blocked, id=6756, stack(0x000000001b280000,0x000000001b380000)]
+  0x000000001a9b9000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=23852, stack(0x000000001b0c0000,0x000000001b1c0000)]
+  0x0000000019bc9000 JavaThread "Service Thread" daemon [_thread_blocked, id=26664, stack(0x000000001a610000,0x000000001a710000)]
+  0x0000000019b4a800 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=4448, stack(0x000000001a510000,0x000000001a610000)]
+  0x0000000019b44800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=12308, stack(0x000000001a410000,0x000000001a510000)]
+  0x0000000019b3f800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=20164, stack(0x000000001a310000,0x000000001a410000)]
+  0x0000000019b38800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=1712, stack(0x000000001a210000,0x000000001a310000)]
+  0x0000000019b37000 JavaThread "Attach Listener" daemon [_thread_blocked, id=22252, stack(0x000000001a110000,0x000000001a210000)]
+  0x0000000019b36800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=26848, stack(0x000000001a010000,0x000000001a110000)]
+  0x0000000019ad0800 JavaThread "Finalizer" daemon [_thread_blocked, id=23728, stack(0x0000000019eb0000,0x0000000019fb0000)]
+  0x0000000002cc9000 JavaThread "Reference Handler" daemon [_thread_blocked, id=16060, stack(0x00000000199b0000,0x0000000019ab0000)]
+
+Other Threads:
+  0x0000000017bc9000 VMThread [stack: 0x00000000198b0000,0x00000000199b0000] [id=22624]
+  0x0000000019bf5000 WatcherThread [stack: 0x000000001a710000,0x000000001a810000] [id=21640]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 37888K, used 29876K [0x00000000d6200000, 0x00000000d8c00000, 0x0000000100000000)
+  eden space 32768K, 91% used [0x00000000d6200000,0x00000000d7f2d210,0x00000000d8200000)
+  from space 5120K, 0% used [0x00000000d8700000,0x00000000d8700000,0x00000000d8c00000)
+  to   space 5120K, 0% used [0x00000000d8200000,0x00000000d8200000,0x00000000d8700000)
+ ParOldGen       total 86016K, used 0K [0x0000000082600000, 0x0000000087a00000, 0x00000000d6200000)
+  object space 86016K, 0% used [0x0000000082600000,0x0000000082600000,0x0000000087a00000)
+ Metaspace       used 16301K, capacity 16532K, committed 16896K, reserved 1064960K
+  class space    used 2157K, capacity 2231K, committed 2304K, reserved 1048576K
+
+Card table byte_map: [0x0000000012090000,0x0000000012480000] byte_map_base: 0x0000000011c7d000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000069623e30
+ Begin Bits: [0x0000000012f20000, 0x0000000014e88000)
+ End Bits:   [0x0000000014e88000, 0x0000000016df0000)
+
+Polling page: 0x00000000026f0000
+
+CodeCache: size=245760Kb used=5096Kb max_used=5108Kb free=240663Kb
+ bounds [0x0000000002cd0000, 0x00000000031d0000, 0x0000000011cd0000]
+ total_blobs=2010 nmethods=1472 adapters=450
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 21.933 Thread 0x0000000019b44800 1468       4       java.awt.Component::isLightweight (8 bytes)
+Event: 21.933 Thread 0x0000000019b4a800 1469       3       sun.java2d.pipe.Region::getInstanceXYXY (12 bytes)
+Event: 21.934 Thread 0x0000000019b4a800 nmethod 1469 0x00000000031ad050 code [0x00000000031ad1c0, 0x00000000031ad410]
+Event: 21.934 Thread 0x0000000019b44800 nmethod 1468 0x00000000031ace10 code [0x00000000031acf40, 0x00000000031acff8]
+Event: 21.937 Thread 0x0000000019b4a800 1471   !   3       com.sun.jna.Native::isSupportedNativeType (47 bytes)
+Event: 21.937 Thread 0x0000000019b38800 1472       4       sun.reflect.ClassFileAssembler::emitByte (11 bytes)
+Event: 21.938 Thread 0x0000000019b4a800 nmethod 1471 0x00000000031cd490 code [0x00000000031cd680, 0x00000000031cde38]
+Event: 21.938 Thread 0x0000000019b4a800 1470       3       com.sun.jna.PointerType::toNative (5 bytes)
+Event: 21.938 Thread 0x0000000019b4a800 nmethod 1470 0x00000000031aca10 code [0x00000000031acb60, 0x00000000031acd50]
+Event: 21.940 Thread 0x0000000019b38800 nmethod 1472 0x00000000031cbb90 code [0x00000000031cbce0, 0x00000000031cbe08]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (10 events):
+Event: 0.561 Thread 0x0000000002bd2800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002ef1d00 method=java.util.HashMap.getNode(ILjava/lang/Object;)Ljava/util/HashMap$Node; @ 129
+Event: 0.564 Thread 0x0000000002bd2800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000002ef6794 method=java.io.DataOutputStream.writeByte(I)V @ 5
+Event: 0.564 Thread 0x0000000002bd2800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000002ef6794 method=java.io.DataOutputStream.writeByte(I)V @ 5
+Event: 0.564 Thread 0x0000000002bd2800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000002ef6794 method=java.io.DataOutputStream.writeByte(I)V @ 5
+Event: 0.564 Thread 0x0000000002bd2800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000002ef6794 method=java.io.DataOutputStream.writeByte(I)V @ 5
+Event: 3.711 Thread 0x000000001aa91000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000002e44f14 method=java.lang.String.equals(Ljava/lang/Object;)Z @ 8
+Event: 3.711 Thread 0x000000001aa91000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000002e44f14 method=java.lang.String.equals(Ljava/lang/Object;)Z @ 8
+Event: 3.711 Thread 0x000000001aa91000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000002e44f14 method=java.lang.String.equals(Ljava/lang/Object;)Z @ 8
+Event: 4.986 Thread 0x000000001aa91000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000002e44f14 method=java.lang.String.equals(Ljava/lang/Object;)Z @ 8
+Event: 5.187 Thread 0x000000001aa91000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002e75a00 method=java.lang.CharacterData.of(I)Ljava/lang/CharacterData; @ 4
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.157 Thread 0x0000000002bd2800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000d649d8e8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u191\11896\hotspot\src\share\vm\prims\methodHandles.cpp, line 1167]
+Event: 0.158 Thread 0x0000000002bd2800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000d64aacb8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u191\11896\hotspot\src\share\vm\prims\methodHandles.cpp, line 1167]
+Event: 0.186 Thread 0x0000000002bd2800 Exception <a 'java/io/FileNotFoundException'> (0x00000000d6544208) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u191\11896\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 0.537 Thread 0x0000000002bd2800 Exception <a 'java/lang/NullPointerException'> (0x00000000d69bf088) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u191\11896\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1185]
+Event: 0.602 Thread 0x0000000002bd2800 Exception <a 'java/lang/UnsatisfiedLinkError': 找不到指定的模块。
+> (0x00000000d6d68e18) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u191\11896\hotspot\src\share\vm\prims\jni.cpp, line 735]
+Event: 0.605 Thread 0x0000000002bd2800 Exception <a 'java/lang/UnsatisfiedLinkError': 找不到指定的模块。
+> (0x00000000d6d69118) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u191\11896\hotspot\src\share\vm\prims\jni.cpp, line 735]
+Event: 0.608 Thread 0x0000000002bd2800 Exception <a 'java/lang/UnsatisfiedLinkError': 找不到指定的模块。
+> (0x00000000d6d694a0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u191\11896\hotspot\src\share\vm\prims\jni.cpp, line 735]
+Event: 0.609 Thread 0x0000000002bd2800 Exception <a 'java/lang/UnsatisfiedLinkError'> (0x00000000d6d6f398) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u191\11896\hotspot\src\share\vm\oops\instanceKlass.cpp, line 959]
+Event: 1.081 Thread 0x0000000002bd2800 Exception <a 'java/io/FileNotFoundException'> (0x00000000d74501d0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u191\11896\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 1.081 Thread 0x0000000002bd2800 Exception <a 'java/lang/NullPointerException'> (0x00000000d7450808) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u191\11896\hotspot\src\share\vm\interpreter\linkResolver.cpp, line 1185]
+
+Events (10 events):
+Event: 21.969 Thread 0x000000001aa8b800 Thread added: 0x000000001aa8b800
+Event: 21.969 Thread 0x000000001aa8f800 Thread added: 0x000000001aa8f800
+Event: 21.969 Thread 0x000000001aa8d000 Thread exited: 0x000000001aa8d000
+Event: 21.969 loading class sun/awt/shell/Win32ShellFolderManager2$ComInvoker$1$1
+Event: 21.970 loading class sun/awt/shell/Win32ShellFolderManager2$ComInvoker$1$1 done
+Event: 21.970 Thread 0x000000001aa8b800 Thread exited: 0x000000001aa8b800
+Event: 21.972 Executing VM operation: RevokeBias
+Event: 21.972 Executing VM operation: RevokeBias done
+Event: 21.972 Thread 0x000000001aa8b000 Thread exited: 0x000000001aa8b000
+Event: 21.982 Thread 0x000000001a969000 Thread exited: 0x000000001a969000
+
+
+Dynamic libraries:
+0x00007ff7ab580000 - 0x00007ff7ab5b7000 	C:\Program Files\Java\jre1.8.0_191\bin\javaw.exe
+0x00007fffbfeb0000 - 0x00007fffc0091000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007fffbf660000 - 0x00007fffbf712000 	C:\Windows\System32\KERNEL32.DLL
+0x00007fffbc280000 - 0x00007fffbc4f3000 	C:\Windows\System32\KERNELBASE.dll
+0x00007fffbf720000 - 0x00007fffbf7c1000 	C:\Windows\System32\ADVAPI32.dll
+0x00007fffbd4b0000 - 0x00007fffbd54e000 	C:\Windows\System32\msvcrt.dll
+0x00007fffbf600000 - 0x00007fffbf65b000 	C:\Windows\System32\sechost.dll
+0x00007fffbf080000 - 0x00007fffbf1a4000 	C:\Windows\System32\RPCRT4.dll
+0x00007fffbf1b0000 - 0x00007fffbf340000 	C:\Windows\System32\USER32.dll
+0x00007fffbce60000 - 0x00007fffbce80000 	C:\Windows\System32\win32u.dll
+0x00007fffbd360000 - 0x00007fffbd388000 	C:\Windows\System32\GDI32.dll
+0x00007fffbc5b0000 - 0x00007fffbc742000 	C:\Windows\System32\gdi32full.dll
+0x00007fffbd2a0000 - 0x00007fffbd33f000 	C:\Windows\System32\msvcp_win.dll
+0x00007fffbced0000 - 0x00007fffbcfca000 	C:\Windows\System32\ucrtbase.dll
+0x00007fffa8b80000 - 0x00007fffa8de9000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.472_none_fb3f9af53068156d\COMCTL32.dll
+0x00007fffbf7f0000 - 0x00007fffbfb12000 	C:\Windows\System32\combase.dll
+0x00007fffbd220000 - 0x00007fffbd29a000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007fffbf050000 - 0x00007fffbf07d000 	C:\Windows\System32\IMM32.DLL
+0x0000000068c30000 - 0x0000000068d02000 	C:\Program Files\Java\jre1.8.0_191\bin\msvcr100.dll
+0x0000000068e00000 - 0x00000000696a4000 	C:\Program Files\Java\jre1.8.0_191\bin\server\jvm.dll
+0x00007fffbd350000 - 0x00007fffbd358000 	C:\Windows\System32\PSAPI.DLL
+0x00007fff9f0c0000 - 0x00007fff9f0c9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007fffb5700000 - 0x00007fffb5723000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007fffa91d0000 - 0x00007fffa91da000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007fffbd440000 - 0x00007fffbd4ac000 	C:\Windows\System32\WS2_32.dll
+0x00007fffb5630000 - 0x00007fffb565a000 	C:\Windows\SYSTEM32\winmmbase.dll
+0x00007fffbce80000 - 0x00007fffbcec9000 	C:\Windows\System32\cfgmgr32.dll
+0x0000000068df0000 - 0x0000000068dff000 	C:\Program Files\Java\jre1.8.0_191\bin\verify.dll
+0x0000000068dc0000 - 0x0000000068de9000 	C:\Program Files\Java\jre1.8.0_191\bin\java.dll
+0x0000000068da0000 - 0x0000000068db6000 	C:\Program Files\Java\jre1.8.0_191\bin\zip.dll
+0x00007fffbd9a0000 - 0x00007fffbede0000 	C:\Windows\System32\SHELL32.dll
+0x00007fffbfb20000 - 0x00007fffbfbc9000 	C:\Windows\System32\shcore.dll
+0x00007fffbc750000 - 0x00007fffbce5d000 	C:\Windows\System32\windows.storage.dll
+0x00007fffbf520000 - 0x00007fffbf571000 	C:\Windows\System32\shlwapi.dll
+0x00007fffbc240000 - 0x00007fffbc251000 	C:\Windows\System32\kernel.appcore.dll
+0x00007fffbc220000 - 0x00007fffbc23f000 	C:\Windows\System32\profapi.dll
+0x00007fffbc1c0000 - 0x00007fffbc20c000 	C:\Windows\System32\powrprof.dll
+0x00007fffbc210000 - 0x00007fffbc21a000 	C:\Windows\System32\FLTLIB.DLL
+0x0000000068a90000 - 0x0000000068c29000 	C:\Program Files\Java\jre1.8.0_191\bin\awt.dll
+0x00007fffbef80000 - 0x00007fffbf042000 	C:\Windows\System32\OLEAUT32.dll
+0x00007fffb6590000 - 0x00007fffb661b000 	C:\Windows\SYSTEM32\apphelp.dll
+0x00007fffb7460000 - 0x00007fffb7489000 	C:\Windows\system32\DWMAPI.DLL
+0x00007fffb69c0000 - 0x00007fffb6a58000 	C:\Windows\system32\uxtheme.dll
+0x00007fffa9260000 - 0x00007fffa9380000 	C:\Windows\system32\opengl32.dll
+0x00007fffabfa0000 - 0x00007fffabfcc000 	C:\Windows\SYSTEM32\GLU32.dll
+0x00007fffbf340000 - 0x00007fffbf4b3000 	C:\Windows\System32\MSCTF.dll
+0x00007fffbfd20000 - 0x00007fffbfe71000 	C:\Windows\System32\ole32.dll
+0x00007fffbbc00000 - 0x00007fffbbc17000 	C:\Windows\SYSTEM32\CRYPTSP.dll
+0x00007fffbb620000 - 0x00007fffbb653000 	C:\Windows\system32\rsaenh.dll
+0x00007fffbbd20000 - 0x00007fffbbd45000 	C:\Windows\SYSTEM32\bcrypt.dll
+0x00007fffbc0c0000 - 0x00007fffbc0e8000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007fffbbbf0000 - 0x00007fffbbbfb000 	C:\Windows\SYSTEM32\CRYPTBASE.dll
+0x0000000068d80000 - 0x0000000068d9a000 	C:\Program Files\Java\jre1.8.0_191\bin\net.dll
+0x00007fffbba40000 - 0x00007fffbbaa6000 	C:\Windows\system32\mswsock.dll
+0x00007fffbb7c0000 - 0x00007fffbb7f8000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x00007fffbd340000 - 0x00007fffbd348000 	C:\Windows\System32\NSI.dll
+0x00007fffb00f0000 - 0x00007fffb0106000 	C:\Windows\SYSTEM32\dhcpcsvc6.DLL
+0x00007fffb00d0000 - 0x00007fffb00ea000 	C:\Windows\SYSTEM32\dhcpcsvc.DLL
+0x0000000068d60000 - 0x0000000068d71000 	C:\Program Files\Java\jre1.8.0_191\bin\nio.dll
+0x00007fffa5880000 - 0x00007fffa58b7000 	C:\Users\HWJ\AppData\Local\Temp\jna-HWJ\jna678776297431598257.dll
+0x00007fffa3dc0000 - 0x00007fffa3df4000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\libvlc.dll
+0x00007fff7f940000 - 0x00007fff7fbf4000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\libvlccore.dll
+0x00007fffb2400000 - 0x00007fffb2411000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libaccess_concat_plugin.dll
+0x00007fffadfe0000 - 0x00007fffadff9000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libaccess_imem_plugin.dll
+0x00007fffa5df0000 - 0x00007fffa5e12000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libaccess_mms_plugin.dll
+0x00007fffa0a30000 - 0x00007fffa0a5b000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libaccess_realrtsp_plugin.dll
+0x00007fff5a600000 - 0x00007fff5a8d1000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libaccess_srt_plugin.dll
+0x00007fffbd030000 - 0x00007fffbd212000 	C:\Windows\System32\CRYPT32.dll
+0x00007fffbc260000 - 0x00007fffbc272000 	C:\Windows\System32\MSASN1.dll
+0x00007fffbbcf0000 - 0x00007fffbbd16000 	C:\Windows\SYSTEM32\ncrypt.dll
+0x00007fffbbcb0000 - 0x00007fffbbce6000 	C:\Windows\SYSTEM32\NTASN1.dll
+0x00007fff9fa30000 - 0x00007fff9fa44000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libaccess_wasapi_plugin.dll
+0x00007fff9fa10000 - 0x00007fff9fa21000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libattachment_plugin.dll
+0x00007fff97f80000 - 0x00007fff97fb9000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libcdda_plugin.dll
+0x00007fff5a370000 - 0x00007fff5a600000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libdcp_plugin.dll
+0x00007fff87880000 - 0x00007fff87968000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libdshow_plugin.dll
+0x00007fff867d0000 - 0x00007fff868b3000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libdtv_plugin.dll
+0x00007fff97f40000 - 0x00007fff97f7f000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libdvdnav_plugin.dll
+0x00007fff9f480000 - 0x00007fff9f4ae000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libdvdread_plugin.dll
+0x00007fff9a820000 - 0x00007fff9a838000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libfilesystem_plugin.dll
+0x00007fff8ad30000 - 0x00007fff8ad55000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libftp_plugin.dll
+0x00007fff8ac60000 - 0x00007fff8ac8d000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libhttps_plugin.dll
+0x00007fff98c50000 - 0x00007fff98c6a000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libhttp_plugin.dll
+0x00007fff96760000 - 0x00007fff96771000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libidummy_plugin.dll
+0x00007fff8e7c0000 - 0x00007fff8e7d1000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libimem_plugin.dll
+0x00007fff7f740000 - 0x00007fff7f93d000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\liblibbluray_plugin.dll
+0x00007fff877a0000 - 0x00007fff8787b000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\liblive555_plugin.dll
+0x00007fff8a6c0000 - 0x00007fff8a6fb000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libnfs_plugin.dll
+0x00007fff89df0000 - 0x00007fff89e9b000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\librtp_plugin.dll
+0x00007fff8c520000 - 0x00007fff8c53b000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libsatip_plugin.dll
+0x00007fff8c330000 - 0x00007fff8c342000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libscreen_plugin.dll
+0x00007fff8ac40000 - 0x00007fff8ac51000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libsdp_plugin.dll
+0x00007fff85780000 - 0x00007fff85856000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libsftp_plugin.dll
+0x00007fff8a210000 - 0x00007fff8a221000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libshm_plugin.dll
+0x00007fff89ff0000 - 0x00007fff8a007000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libsmb_plugin.dll
+0x00007fffb7050000 - 0x00007fffb706a000 	C:\Windows\SYSTEM32\MPR.dll
+0x00007fff98a00000 - 0x00007fff98a17000 	C:\Windows\SYSTEM32\NETAPI32.dll
+0x00007fffbb8c0000 - 0x00007fffbb8ce000 	C:\Windows\SYSTEM32\NETUTILS.DLL
+0x00007fff99dd0000 - 0x00007fff99df6000 	C:\Windows\SYSTEM32\SRVCLI.DLL
+0x00007fff89fd0000 - 0x00007fff89fe1000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libtcp_plugin.dll
+0x00007fff89fb0000 - 0x00007fff89fc7000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libtimecode_plugin.dll
+0x00007fff89f90000 - 0x00007fff89fa1000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libudp_plugin.dll
+0x00007fff874e0000 - 0x00007fff87502000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libvcd_plugin.dll
+0x00007fff86b70000 - 0x00007fff86b91000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libvdr_plugin.dll
+0x00007fff59df0000 - 0x00007fff5a066000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access\libvnc_plugin.dll
+0x00007fffb64a0000 - 0x00007fffb64b0000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access_output\libaccess_output_dummy_plugin.dll
+0x00007fff87310000 - 0x00007fff87321000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access_output\libaccess_output_file_plugin.dll
+0x00007fff86b50000 - 0x00007fff86b61000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access_output\libaccess_output_http_plugin.dll
+0x00007fff869c0000 - 0x00007fff86a6d000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access_output\libaccess_output_livehttp_plugin.dll
+0x00007fff85b50000 - 0x00007fff85bc9000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access_output\libaccess_output_shout_plugin.dll
+0x00007fff59b10000 - 0x00007fff59de1000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access_output\libaccess_output_srt_plugin.dll
+0x00007fff86b30000 - 0x00007fff86b41000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\access_output\libaccess_output_udp_plugin.dll
+0x00007fff867b0000 - 0x00007fff867c9000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libaudiobargraph_a_plugin.dll
+0x00007fff86310000 - 0x00007fff86326000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libaudio_format_plugin.dll
+0x00007fff862f0000 - 0x00007fff86303000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libchorus_flanger_plugin.dll
+0x00007fff86250000 - 0x00007fff86264000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libcompressor_plugin.dll
+0x00007fff85b30000 - 0x00007fff85b41000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libdolby_surround_decoder_plugin.dll
+0x00007fff85760000 - 0x00007fff8577b000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libequalizer_plugin.dll
+0x00007fff83be0000 - 0x00007fff83bf1000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libgain_plugin.dll
+0x00007fff83ad0000 - 0x00007fff83ae2000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libheadphone_channel_mixer_plugin.dll
+0x00007fff83ab0000 - 0x00007fff83ac1000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libkaraoke_plugin.dll
+0x00007fff839c0000 - 0x00007fff839f0000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libmad_plugin.dll
+0x00007fff839a0000 - 0x00007fff839b2000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libmono_plugin.dll
+0x00007fff83980000 - 0x00007fff83991000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libnormvol_plugin.dll
+0x00007fff83960000 - 0x00007fff83973000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libparam_eq_plugin.dll
+0x00007fff83650000 - 0x00007fff83662000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libremap_plugin.dll
+0x00007fff759c0000 - 0x00007fff75b3a000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libsamplerate_plugin.dll
+0x00007fff83630000 - 0x00007fff83644000 	C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\plugin\plugins\audio_filter\libscaletempo_pitch_plugin.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=GBK 
+java_command: windows.OperationFrame
+java_class_path (initial): C:\Program Files\Java\jre1.8.0_191\lib\resources.jar;C:\Program Files\Java\jre1.8.0_191\lib\rt.jar;C:\Program Files\Java\jre1.8.0_191\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_191\lib\jce.jar;C:\Program Files\Java\jre1.8.0_191\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_191\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_191\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jre1.8.0_191\lib\ext\cldrdata.jar;C:\Program Files\Java\jre1.8.0_191\lib\ext\dnsns.jar;C:\Program Files\Java\jre1.8.0_191\lib\ext\jaccess.jar;C:\Program Files\Java\jre1.8.0_191\lib\ext\jfxrt.jar;C:\Program Files\Java\jre1.8.0_191\lib\ext\localedata.jar;C:\Program Files\Java\jre1.8.0_191\lib\ext\nashorn.jar;C:\Program Files\Java\jre1.8.0_191\lib\ext\sunec.jar;C:\Program Files\Java\jre1.8.0_191\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jre1.8.0_191\lib\ext\sunmscapi.jar;C:\Program Files\Java\jre1.8.0_191\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jre1.8.0_191\lib\ext\zipfs.jar;C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\bin;C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\libs\slf4j-api-1.7.2.jar;C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\libs\webcam-capture-0.3.12.jar;C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\libs\bridj-0.7.0.jar;C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\libs\jna-3.5.2.jar;C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\libs\platform-3.5.2.jar;C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\libs\slf4j-api-1.7.12.jar;C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\libs\slf4j-simple-1.7.12.jar;C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\libs\vlcj-3.8.0.jar;C:\Users\HWJ\Documents\HelloWorld\Code\Java\QXSB_Client\QXSB_Client\libs\mysql-connector-java-8.0.13.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=.;.;C:\PROGRA~2\JMF21~1.1E\lib\sound.jar;C:\PROGRA~2\JMF21~1.1E\lib\jmf.jar;C:\PROGRA~2\JMF21~1.1E\lib;
+PATH=C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\PuTTY\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Users\HWJ\AppData\Local\Microsoft\WindowsApps;C:\Users\HWJ\AppData\Local\atom\bin;C:\Program Files\Bandizip\;C:\Windows\System32;
+USERNAME=HWJ
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17134 (10.0.17134.1)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8227540k(2290496k free), swap 12783356k(2230420k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.191-b12) for windows-amd64 JRE (1.8.0_191-b12), built on Oct  6 2018 09:29:03 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue Jan 01 18:37:46 2019
+elapsed time: 22 seconds (0d 0h 0m 22s)
+
